@@ -3,8 +3,7 @@ import "../css/TodoItems.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
 
-function Todo(props) {
-  const { task } = props;
+function TodoItems({ task, id, removeTodo }) {
   return (
     <li className="TodoItems">
       <p>{task}</p>
@@ -12,7 +11,7 @@ function Todo(props) {
         <button className="edit">
           <FontAwesomeIcon icon={faEdit} />
         </button>
-        <button className="delete">
+        <button className="delete" onClick={() => removeTodo(id)}>
           <FontAwesomeIcon icon={faTrash} />
         </button>
       </div>
@@ -20,4 +19,4 @@ function Todo(props) {
   );
 }
 
-export default Todo;
+export default TodoItems;

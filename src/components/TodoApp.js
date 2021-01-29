@@ -17,10 +17,16 @@ function TodoApp() {
     }
     setTodos([...todos, { task: newText, id: uuidv4(), completed: false }]);
   };
+
+  const removeTodo = (id) => {
+    const updatedTodos = todos.filter((todo) => todo.id !== id);
+    setTodos(updatedTodos);
+  };
+
   return (
     <div className="TodoApp">
       <Form addTodo={addTodo} />
-      <TodoList todos={todos} />
+      <TodoList todos={todos} removeTodo={removeTodo} />
     </div>
   );
 }
