@@ -1,19 +1,25 @@
 import React from "react";
 import TodoItems from "./TodoItems";
 import "../css/TodoList.css";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
-function TodoList({ todos, removeTodo }) {
+function TodoList({ todos, removeTodo, toggleTodo, editTodo }) {
   return (
-    <ul className="TodoList">
+    <TransitionGroup className="TodoList" component={"ul"}>
       {todos.map((todo) => (
-        <TodoItems
-          task={todo.task}
-          key={todo.id}
-          id={todo.id}
-          removeTodo={removeTodo}
-        />
+        <CSSTransition key={todo.id} classNames="fade" timeout={300}>
+          <TodoItems
+            task={todo.task}
+            key={todo.id}
+            id={todo.id}
+            completed={todo.completed}
+            removeTodo={removeTodo}
+            toggleTodo={toggleTodo}
+            editTodo={editTodo}
+          />
+        </CSSTransition>
       ))}
-    </ul>
+    </TransitionGroup>
   );
 }
 

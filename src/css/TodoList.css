@@ -3,3 +3,21 @@
   text-align: left;
   list-style: none;
 }
+.TodoList .fade-enter {
+  opacity: 0.01;
+  transform: translate(0, 10px);
+}
+.TodoList .fade-enter-active {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: all 300ms ease-in;
+}
+.TodoList .fade-exit {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.TodoList .fade-exit-active {
+  opacity: 0.01;
+  transform: translate(0, -10px);
+  transition: all 300ms ease-out;
+}

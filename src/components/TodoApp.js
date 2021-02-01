@@ -6,8 +6,16 @@ import { v4 as uuidv4 } from "uuid";
 
 function TodoApp() {
   const initialTodos = [
-    { task: "Buy something new", id: uuidv4(), completed: false },
-    { task: "Finish my boring job", id: uuidv4(), completed: false },
+    {
+      task: "Buy something new",
+      id: uuidv4(),
+      completed: false,
+    },
+    {
+      task: "Finish my boring job",
+      id: uuidv4(),
+      completed: false,
+    },
   ];
   const [todos, setTodos] = useState(initialTodos);
 
@@ -23,10 +31,32 @@ function TodoApp() {
     setTodos(updatedTodos);
   };
 
+  const toggleTodo = (id) => {
+    const updatedTodos = todos.map((todo) =>
+      todo.id === id ? { ...todo, completed: !todo.completed } : todo
+    );
+    setTodos(updatedTodos);
+  };
+
+  const editTodo = (newTask, id) => {
+    if (newTask === "") {
+      return;
+    }
+    const updatedTodos = todos.map((todo) =>
+      todo.id === id ? { ...todo, task: newTask } : todo
+    );
+    setTodos(updatedTodos);
+  };
+
   return (
     <div className="TodoApp">
       <Form addTodo={addTodo} />
-      <TodoList todos={todos} removeTodo={removeTodo} />
+      <TodoList
+        todos={todos}
+        removeTodo={removeTodo}
+        toggleTodo={toggleTodo}
+        editTodo={editTodo}
+      />
     </div>
   );
 }

@@ -17,7 +17,6 @@ function Form({ addTodo }) {
   return (
     <form
       className="Form"
-      id="Form"
       onSubmit={(e) => {
         e.preventDefault();
         addTodo(value);

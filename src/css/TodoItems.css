@@ -16,15 +16,42 @@
 .TodoItems:last-child {
   margin-bottom: 0;
 }
-.TodoItems p {
-  word-wrap: break-word;
-  width: 85%;
+.TodoItems.isEditing {
+  padding: 0.95rem 1.6rem;
+}
+.TodoItems .check.isChecked,
+.TodoItems.isEditing .edit {
+  box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 1),
+    inset 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+.TodoItems .check.isChecked .fa-check,
+.TodoItems.isEditing .edit .fa-edit {
+  transform: scale(0.9);
+}
+.TodoItems .task {
+  display: inline-block;
+  position: relative;
+  word-break: break-all;
+}
+.TodoItems .task::after {
+  content: "";
+  position: absolute;
+  bottom: 40%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #666;
+  transition: all 0.3s ease;
+}
+.TodoItems .task.isChecked::after {
+  width: 100%;
 }
 .TodoItems button {
   border: 0;
   outline: 0;
   font-size: 1.6rem;
   border-radius: 1.2rem;
+  width: 38px;
   padding: 1rem;
   color: #838aa0;
   background-color: #ebecf0;
@@ -32,7 +59,8 @@
   box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
   cursor: pointer;
 }
-.TodoItems .icons {
+.TodoItems .left,
+.TodoItems .right {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -40,6 +68,23 @@
 .TodoItems button:hover {
   box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
 }
-.TodoItems .edit {
+.TodoItems .check {
   margin-right: 1rem;
+}
+.TodoItems .delete {
+  margin: 0 1rem;
+}
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 500ms;
 }

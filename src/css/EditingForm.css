@@ -1,10 +1,11 @@
-.Form {
+.EditingForm {
   display: flex;
-  flex-direction: column;
-  margin-bottom: 4.5rem;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
-.Form input,
-.Form button {
+.EditingForm input,
+.EditingForm button {
   border: 0;
   outline: 0;
   font-size: 1.6rem;
@@ -12,38 +13,37 @@
   padding: 1.6rem;
   background-color: #ebecf0;
 }
-.Form label {
-  margin-bottom: 4rem;
+.EditingForm label {
   width: 100%;
 }
-.Form input {
+.EditingForm input {
   box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
-  width: 650px;
+  width: 570px;
   box-sizing: border-box;
   transition: all 0.2s ease-in-out;
   color: #666;
   font-family: "Montserrat", sans-serif;
   text-shadow: 1px 1px 0 #fff;
 }
-input:focus {
+.EditingForm input:focus {
   box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
 }
-.Form button {
-  width: 300px;
-  margin: 0 auto;
-  color: #61dafb;
-  font-weight: bold;
+.EditingForm button {
+  border: 0;
+  outline: 0;
+  font-size: 1.6rem;
+  width: 38px;
+  border-radius: 1.2rem;
+  padding: 1rem;
+  color: #838aa0;
+  background-color: #ebecf0;
+  text-shadow: 1px 1px 0 #fff;
   box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
-  transition: all 0.2s ease-in-out;
   cursor: pointer;
-  font-family: "Montserrat", sans-serif;
 }
-.Form button:hover {
+.EditingForm button:hover {
   box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
 }
-.Form button:active {
-  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
-}
-.Form span {
-  margin-right: 1rem;
+.EditingForm .edit {
+  margin: 0;
 }
