@@ -1,23 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TodoList from "./TodoList";
 import Form from "./Form";
 import "../css/TodoApp.css";
 import { v4 as uuidv4 } from "uuid";
 
 function TodoApp() {
-  const initialTodos = [
+  const initialState = [
     {
-      task: "Buy something new",
-      id: uuidv4(),
-      completed: false,
-    },
-    {
-      task: "Finish my boring job",
+      task: "I don't know what to do...",
       id: uuidv4(),
       completed: false,
     },
   ];
-  const [todos, setTodos] = useState(initialTodos);
+  const items = JSON.parse(window.localStorage.getItem("items"));
+  const state = items.length ? items : initialState;
+  const [todos, setTodos] = useState(state);
+
+  useEffect(() => {
+    window.localStorage.setItem("items", JSON.stringify(todos));
+  }, [todos]);
 
   const addTodo = (newText) => {
     if (newText === "") {
