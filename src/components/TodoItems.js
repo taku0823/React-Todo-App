@@ -1,28 +1,25 @@
-import React, { useState } from "react";
+import React from "react";
 import EditingForm from "./EditingForm";
 import "../css/TodoItems.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faEdit, faCheck } from "@fortawesome/free-solid-svg-icons";
 
 function TodoItems(props) {
-  const { task, id, completed, removeTodo, toggleTodo, editTodo } = props;
-
-  const [isEditing, editingForm] = useState(false);
-
-  const handleClick = () => {
-    editingForm(!isEditing);
-  };
+  const {
+    task,
+    id,
+    completed,
+    showEditingForm,
+    removeTodo,
+    toggleTodo,
+    editTodo,
+    toggleEditingForm,
+  } = props;
 
   return (
-    <li className={`TodoItems${isEditing ? " isEditing" : ""}`}>
-      {isEditing ? (
-        <EditingForm
-          editTodo={editTodo}
-          task={task}
-          id={id}
-          isEditing={isEditing}
-          editingForm={editingForm}
-        />
+    <li className={`TodoItems${showEditingForm ? " isEditing" : ""}`}>
+      {showEditingForm ? (
+        <EditingForm editTodo={editTodo} task={task} id={id} />
       ) : (
         <>
           <div className="left">
@@ -38,7 +35,7 @@ function TodoItems(props) {
             <button className="delete" onClick={() => removeTodo(id)}>
               <FontAwesomeIcon className="delete_icon" icon={faTrash} />
             </button>
-            <button className="edit" onClick={handleClick}>
+            <button className="edit" onClick={() => toggleEditingForm(id)}>
               <FontAwesomeIcon icon={faEdit} />
             </button>
           </div>

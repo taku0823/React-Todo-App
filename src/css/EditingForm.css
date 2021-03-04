@@ -18,7 +18,7 @@
 }
 .EditingForm input {
   box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
-  width: 570px;
+  width: 97%;
   box-sizing: border-box;
   transition: all 0.2s ease-in-out;
   color: #666;
@@ -46,4 +46,20 @@
 }
 .EditingForm .edit {
   margin: 0;
+}
+
+@media screen and (max-width: 599px) {
+  .EditingForm input,
+  .EditingForm button {
+    padding: 1.2rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .EditingForm input,
+  .EditingForm button {
+    padding: 1.4rem;
+    font-size: 1.4rem;
+  }
 }

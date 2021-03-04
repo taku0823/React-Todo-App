@@ -16,3 +16,15 @@ body {
   font-family: "Montserrat", sans-serif;
   background-color: #ebecf0;
 }
+
+@media screen and (max-width: 599px) {
+  body {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  body {
+    padding: 4rem 0;
+  }
+}

@@ -2,5 +2,11 @@
   margin: 0 auto;
   padding: 0;
   width: 100%;
-  max-width: 650px;
+  max-width: 900px;
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .TodoApp {
+    max-width: 100%;
+  }
 }

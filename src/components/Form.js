@@ -1,18 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
+import useFormState from "../hooks/useFormState";
 import "../css/Form.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 function Form({ addTodo }) {
-  const [value, setValue] = useState("");
-
-  const handleChange = (event) => {
-    setValue(event.target.value);
-  };
-
-  const reset = () => {
-    setValue("");
-  };
+  const [value, handleChange, reset] = useFormState("");
 
   return (
     <form

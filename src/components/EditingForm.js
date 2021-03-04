@@ -1,26 +1,23 @@
-import React, { useState } from "react";
+import React from "react";
+import useFormState from "../hooks/useFormState";
 import "../css/EditingForm.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEdit } from "@fortawesome/free-solid-svg-icons";
 
-function EditingForm({ task, id, editTodo, isEditing, editingForm }) {
-  const [newValue, setNewValue] = useState(task);
-
-  const handleChange = (event) => {
-    setNewValue(event.target.value);
-  };
+function EditingForm({ task, id, editTodo }) {
+  const [value, handleChange, reset] = useFormState(task);
 
   return (
     <form
       className="EditingForm"
       onSubmit={(e) => {
         e.preventDefault();
-        editTodo(newValue, id);
-        editingForm(!isEditing);
+        reset();
+        editTodo(value, id);
       }}
     >
       <label>
-        <input type="text" value={newValue} onChange={handleChange} autoFocus />
+        <input type="text" value={value} onChange={handleChange} autoFocus />
       </label>
       <button className="edit" type="submit">
         <FontAwesomeIcon icon={faEdit} />
