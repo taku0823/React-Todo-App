@@ -23,6 +23,7 @@
   -webkit-box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
   -moz-box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
   box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+  -webkit-appearance: none;
   box-sizing: border-box;
   text-shadow: 1px 1px 0 #fff;
   transition: all 0.2s ease-in-out;
@@ -34,6 +35,7 @@ input:focus {
   -webkit-box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
   -moz-box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
   box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+  -webkit-appearance: none;
 }
 .Form button {
   width: 40%;
@@ -44,6 +46,7 @@ input:focus {
   -webkit-box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
   -moz-box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
   box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+  -webkit-appearance: none;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
@@ -51,11 +54,13 @@ input:focus {
   -webkit-box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
   -moz-box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
   box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+  -webkit-appearance: none;
 }
 .Form button:active {
   -webkit-box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
   -moz-box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
   box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+  -webkit-appearance: none;
 }
 .Form span {
   margin-right: 1rem;
