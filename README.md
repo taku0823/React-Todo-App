@@ -6,8 +6,8 @@ This is a simple to-do app with reactJS.
 
 ## Getting Started
 
-Clone this repository on your local machine.
-And Run the following commands into the project folder to install project dependencies.
+Clone this repository on your local machine.\
+And Run the following commands into the project folder to install project dependencies.\
 `npm install`
 
 ## Available Scripts
