@@ -2,6 +2,7 @@
   "name": "react_todo_app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://taku0823.github.io/react-todo-app/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
@@ -21,9 +22,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://taku0823.github.io/react-todo-app/",
   "eslintConfig": {
     "extends": [
       "react-app",
