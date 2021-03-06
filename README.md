@@ -2,7 +2,7 @@
 
 This is a simple to-do app with reactJS.
 
-Check it out [here].(https://taku0823.github.io/react-todo-app/)
+Check it out [here](https://taku0823.github.io/react-todo-app/)
 
 ![alt_text](screenshot.png)
 
