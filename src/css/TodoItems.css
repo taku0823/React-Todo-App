@@ -11,6 +11,8 @@
   outline: 0;
   border-radius: 2.5rem;
   text-shadow: 1px 1px 0 #fff;
+  -webkit-box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+  -moz-box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
   box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
 }
 .TodoItems:last-child {
@@ -21,6 +23,10 @@
 }
 .TodoItems .check.isChecked,
 .TodoItems.isEditing .edit {
+  -webkit-box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 1),
+    inset 3px 3px 5px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 1),
+    inset 3px 3px 5px rgba(0, 0, 0, 0.1);
   box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 1),
     inset 3px 3px 5px rgba(0, 0, 0, 0.1);
 }
@@ -56,6 +62,8 @@
   outline: 0;
   border-radius: 1.2rem;
   text-shadow: 1px 1px 0 #fff;
+  -webkit-box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+  -moz-box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
   box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
   cursor: pointer;
 }
@@ -66,6 +74,8 @@
   align-items: center;
 }
 .TodoItems button:hover {
+  -webkit-box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+  -moz-box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
   box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
 }
 .TodoItems .check {
