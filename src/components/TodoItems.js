@@ -17,19 +17,19 @@ function TodoItems(props) {
   } = props;
 
   return (
-    <li className={`TodoItems${showEditingForm ? " isEditing" : ""}`}>
+    <li className={`TodoItems ${showEditingForm ? "isEditing" : ""}`}>
       {showEditingForm ? (
         <EditingForm editTodo={editTodo} task={task} id={id} />
       ) : (
         <>
           <div className="left">
             <button
-              className={`check${completed ? " isChecked" : ""}`}
+              className={`check ${completed ? "isChecked" : ""}`}
               onClick={() => toggleTodo(id)}
             >
               <FontAwesomeIcon icon={faCheck} />
             </button>
-            <p className={`task${completed ? " isChecked" : ""}`}>{task}</p>
+            <p className={`task ${completed ? "isChecked" : ""}`}>{task}</p>
           </div>
           <div className="right">
             <button className="delete" onClick={() => removeTodo(id)}>

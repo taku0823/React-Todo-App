@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-function useFormState(initialState) {
-  const [state, setState] = useState(initialState);
+function useFormState(initState) {
+  const [state, setState] = useState(initState);
 
   const handleChange = (event) => {
     setState(event.target.value);

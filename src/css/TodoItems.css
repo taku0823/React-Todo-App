@@ -1,15 +1,15 @@
 .TodoItems {
+  margin-bottom: 2.5rem;
+  padding: 1.6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2.5rem;
+  font-size: 1.6rem;
+  color: #666;
+  background-color: #ebecf0;
   border: 0;
   outline: 0;
-  color: #666;
-  font-size: 1.6rem;
   border-radius: 2.5rem;
-  padding: 1.6rem;
-  background-color: #ebecf0;
   text-shadow: 1px 1px 0 #fff;
   box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
 }
@@ -47,14 +47,14 @@
   width: 100%;
 }
 .TodoItems button {
-  border: 0;
-  outline: 0;
-  font-size: 1.6rem;
-  border-radius: 1.2rem;
   width: 38px;
   padding: 1rem;
+  font-size: 1.6rem;
   color: #838aa0;
   background-color: #ebecf0;
+  border: 0;
+  outline: 0;
+  border-radius: 1.2rem;
   text-shadow: 1px 1px 0 #fff;
   box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
   cursor: pointer;

@@ -6,7 +6,7 @@ import "../css/TodoApp.css";
 import { v4 as uuidv4 } from "uuid";
 
 function TodoApp() {
-  const initialState = [
+  const initState = [
     {
       task: "I don't know what to do...",
       id: uuidv4(),
@@ -15,11 +15,14 @@ function TodoApp() {
     },
   ];
 
-  const [todos, setTodos] = useLocalStorage("items", initialState);
+  const [todos, setTodos] = useLocalStorage("items", initState);
 
   const addTodo = (newText) => {
     if (newText === "") return;
-    setTodos([...todos, { task: newText, id: uuidv4(), completed: false }]);
+    setTodos([
+      ...todos,
+      { task: newText, id: uuidv4(), completed: false, showEditingForm: false },
+    ]);
   };
 
   const removeTodo = (id) => {

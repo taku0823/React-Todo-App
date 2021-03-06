@@ -3,13 +3,9 @@ import TodoItems from "./TodoItems";
 import "../css/TodoList.css";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
-function TodoList({
-  todos,
-  removeTodo,
-  toggleTodo,
-  editTodo,
-  toggleEditingForm,
-}) {
+function TodoList(props) {
+  const { todos, removeTodo, toggleTodo, editTodo, toggleEditingForm } = props;
+
   return (
     <TransitionGroup className="TodoList" component={"ul"}>
       {todos.map((todo) => (

@@ -1,42 +1,42 @@
 .EditingForm {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
 }
 .EditingForm input,
 .EditingForm button {
-  border: 0;
-  outline: 0;
+  padding: 1.6rem;
   font-size: 1.6rem;
   border-radius: 2.5rem;
-  padding: 1.6rem;
+  border: 0;
+  outline: 0;
   background-color: #ebecf0;
 }
 .EditingForm label {
   width: 100%;
 }
 .EditingForm input {
-  box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
   width: 97%;
-  box-sizing: border-box;
-  transition: all 0.2s ease-in-out;
-  color: #666;
   font-family: "Montserrat", sans-serif;
+  color: #666;
+  box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+  box-sizing: border-box;
   text-shadow: 1px 1px 0 #fff;
+  transition: all 0.2s ease-in-out;
 }
 .EditingForm input:focus {
   box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
 }
 .EditingForm button {
+  width: 38px;
+  padding: 1rem;
+  font-size: 1.6rem;
+  background-color: #ebecf0;
+  color: #838aa0;
   border: 0;
   outline: 0;
-  font-size: 1.6rem;
-  width: 38px;
   border-radius: 1.2rem;
-  padding: 1rem;
-  color: #838aa0;
-  background-color: #ebecf0;
   text-shadow: 1px 1px 0 #fff;
   box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
   cursor: pointer;
