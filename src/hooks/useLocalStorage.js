@@ -5,11 +5,9 @@ function useLocalStorage(key, initState) {
     const val = JSON.parse(window.localStorage.getItem(key));
     return val.length ? val : initState;
   });
-
   useEffect(() => {
     window.localStorage.setItem(key, JSON.stringify(state));
   }, [state, key]);
-
   return [state, setState];
 }
 
